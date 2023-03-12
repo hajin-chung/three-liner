@@ -1,0 +1,19 @@
+{
+  "name": "three-liner",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^2.1.0",
+    "@astrojs/tailwind": "^3.1.0",
+    "astro": "^2.1.2",
+    "solid-js": "^1.6.13",
+    "tailwindcss": "^3.2.7"
+  }
+}
