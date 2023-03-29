@@ -7,14 +7,14 @@ export const Input = () => {
   const handleSubmit = async () => {
     const res = await fetch("/api/summarize", {
       method: "POST",
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ text: text() }),
     });
     const data = await res.json();
     setSummarized(data.summarized);
   };
 
   return (
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 w-full">
       <textarea
         class="w-full border-2 border-black rounded-lg p-1"
         value={text()}
@@ -27,9 +27,7 @@ export const Input = () => {
         요약하기
       </button>
       {summarized() && (
-        <div class="w-full border-2 border-black rounded-lg p-1">
-          {summarized}
-        </div>
+        <pre class="w-full bg-slate-100 rounded-lg p-1">{summarized()}</pre>
       )}
     </div>
   );

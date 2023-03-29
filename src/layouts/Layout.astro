@@ -3,14 +3,16 @@
 
 <!DOCTYPE html>
 <html lang="kr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>세줄 요약기</title>
-	</head>
-	<body class="flex w-full h-full justify-center">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>세줄 요약기</title>
+  </head>
+  <body class="flex w-full h-full justify-center">
+    <div class="max-w-3xl w-full">
+      <slot />
+    </div>
+  </body>
 </html>
